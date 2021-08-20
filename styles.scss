@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-font: "Red Hat Display", sans-serif;
+  --header-font: "Red Hat Display", sans-serif;
+  --primary: hsl(245, 75%, 52%);
+  --secondary: hsl(225, 100%, 94%);
+}
+
+body {
+  font-family: var(--body-font);
+  background: #e0e8ff;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+  font-weight: 700;
+}
+p {
+  color: #9499ac;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  height: 100vh;
+
+  background: url(./images/pattern-background-mobile.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 0.5rem 1rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    border-radius: 1rem 1rem 0 0;
+  }
+  h1 {
+    margin-top: 2rem;
+  }
+  p {
+    margin: 1.2rem;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+
+  .annual-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fe;
+    gap: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 50px;
+      }
+      p {
+        width: unset;
+        margin: unset;
+
+        strong {
+          color: #000;
+        }
+      }
+    }
+
+    a {
+      font-weight: 700;
+      color: var(--primary);
+    }
+  }
+
+  .btn-primary {
+    display: block;
+    margin: 1.4rem;
+    padding: 1rem 3.5rem;
+    background: var(--primary);
+    border: none;
+    color: #fff;
+    font-family: var(--body-font);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+
+  .anchor-bottom {
+    text-decoration: none;
+    color: #717ea1;
+    font-weight: 700;
+    display: block;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 786px) {
+  .container {
+    background: url("./images/pattern-background-desktop.svg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    max-width: 420px;
+  }
+}
